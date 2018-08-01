@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Efficient Uncertainty Estimation for Semantic Segmentation in Videos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+		<script src="lightbox2-master/dist/js/lightbox-plus-jquery.js"></script>
+		<script>
+    		lightbox.option({
+      			'resizeDuration': 200,
+      			'disableScrolling': true,
+      			'positionFromTop' : 60,
+      			'fadeDuration': 300
+    		})
+		</script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<!-- <span class="logo"><img src="images/myphoto.jpg" alt="" /></span>-->
+						<h2>Efficient Uncertainty Estimation for Semantic Segmentation in Videos</h2>
+						<p>
+							<a href="https://andyhahaha.github.io/">Po-Yu Huang</a> <sup>1</sup>, <a href="https://hsuwanting.github.io/">Wan-Ting Hsu</a> <sup>1</sup>, Chun-Yueh Chiu <sup>1</sup>, <a href="https://www.linkedin.com/in/tingfan-wu-5359669/">Ting-Fan Wu</a> <sup>2</sup>, <a href="http://aliensunmin.github.io/">Min Sun</a> <sup>1</sup><br />
+						<sup>1</sup> National Tsing Hua University, <sup>2</sup> Umbo Computer Vision<br /><br />
+						European Conference on Computer Vision (ECCV) 2018
+						</p>
+						<ul class="logo_top">
+							<li class="short_logo"><a href="http://www.nthu.edu.tw/"><img src="images/NTHU_small.png" alt="" / ></a></li>
+							<li class="long_logo"><a href="https://umbocv.ai/"><img src="images/umbocv2.png" alt="" / ></a></li>
+						</ul>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#abstract" class="active">Abstract</a></li>
+							<li><a href="#resource">Resources</a></li>
+							<li><a href="#example">Example</a></li>
+							<li><a href="#acknowledge">Acknowledgement</a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="abstract" class="main special">
+								<div class="content">
+									<header class="major">
+										<h2>Abstract</h2>
+										<img src="images/MC_vs_RTAMC.png" alt="" / width="100%"></br></br>
+										<p class='align-left'>
+											Uncertainty estimation in deep learning becomes more important recently. A deep learning model can't be applied in real applications if we don't know whether the model is certain about the decision or not. Some literature proposes the Bayesian neural network which can estimate the uncertainty by Monte Carlo Dropout (MC dropout). However, MC dropout needs to forward the model N times which results in N times slower. For real-time applications such as a self-driving car system, which needs to obtain the prediction and the uncertainty as fast as possible, so that MC dropout becomes impractical. In this work, we propose the region-based temporal aggregation (RTA) method which leverages the temporal information in videos to simulate the sampling procedure. Our RTA method with Tiramisu backbone is 10x faster than the MC dropout with Tiramisu backbone (N = 5). Furthermore, the uncertainty estimation obtained by our RTA method is comparable to MC dropout's uncertainty estimation on pixel-level and frame-level metrics.
+										</p>
+									</header>
+								</div>
+							</section>
+
+						<!-- project -->
+							<section id="resource" class="main special">
+								<header class="major">
+									<h2>Resources</h2>
+								</header>
+								<img src="images/paper_pages/paper_pages_short.png" alt="" / width="100%">
+								<pre><code>@InProceedings{huang2018efficient,
+  title={Efficient Uncertainty Estimation for Semantic Segmentation in Videos},
+  author={Huang, Po-Yu and Hsu, Wan-Ting and Chiu, Chun-Yueh and Wu, Ting-Fan and Sun, Min},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2018}
+}</code></pre>
+								<a href="" class="button icon fa-github">Code (coming soon)</a>
+								<a href="https://arxiv.org/abs/1807.11037" class="button icon fa-file-pdf-o">Paper</a>
+							</section>
+
+							<section id="example" class="main special">
+								<header class="major">
+									<h2>Example</h2>
+								</header>
+								<p>Results comparison on CamVid dataset(MC dropout vs. RTA-MC dropout). </p>
+								<img src="images/result2.jpg" alt="" / width="90%"></br></br>
+								<p>The top row is the input image, with the ground truth shown in the second row. The third row and fourth row show the segmentation prediction of MC dropout and RTA-MC respectively. Its corresponding uncertainty map is also shown in the fifth and sixth row where the more brighter space represents higher uncertainty. We even show the error in the last two rows where the red space represents the wrong prediction, and the tiffany-blue space represents correct prediction.</p>
+
+							</section>
+
+							<section id="acknowledge" class="main special">
+								<header class="major">
+									<h2>Acknowledgement</h2>
+								</header>
+
+								<ul class="logo_top">
+									<li class="long_logo"><a href="https://umbocv.ai/"><img src="images/umbocv2.png" alt="" / ></a></li>
+									<li class="long_logo"><a href="https://www.mediatek.tw/"><img src="images/MediaTek.png" alt="" / ></a></li>
+									<li class="long_logo"><a href="https://www.most.gov.tw/"><img src="images/most_logo.png" alt="" / ></a></li>
+								</ul>
+							</section>
+
+						<!-- First Section -->
+
+						<!-- Second Section -->
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!--<section>
+							<h2></h2>
+							<p></p>
+						</section>-->
+
+						<p class="contact">
+							<b>Contact:</b> <a href="https://andyhahaha.github.io/">Po-Yu Huang</a></br>
+						</p>
+
+						<p class="copyright">
+							&copy; Po-Yu Huang. Designed by <a href="https://html5up.net">HTML5 UP</a>. Hosted on <a href="https://pages.github.com/">Github Page.</a></br>
+							Last Updated: 29 July 2018
+						</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
